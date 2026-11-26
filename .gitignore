@@ -1,0 +1,11 @@
+.env
+.env.*
+*.local.toml
+gateway.toml
+*.secret
+*.wbgbackup
+accounts/
+usage/
+state/
+__pycache__/
+*.py[cod]

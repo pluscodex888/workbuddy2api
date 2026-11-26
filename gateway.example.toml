@@ -1,0 +1,28 @@
+[listen]
+host = "127.0.0.1"
+port = 8788
+
+# 需要时取消注释，并使用本机 WorkBuddy 桥接程序实际报告的地址。
+# [native]
+# base_url = "http://127.0.0.1:8789/workbaby/v1"
+# token_env = "WB_NATIVE_TOKEN"
+
+# 每个 API 分组只能调用配置中的模型和接口。
+# [groups.v1]
+# base_url = "http://127.0.0.1:9000/v1"
+# token_env = "WB_UPSTREAM_TOKEN"
+# models = ["example-model"]
+# routes = ["chat/completions", "responses"]
+# normalize_stream = false
+
+# 兼容需要独立 x-api-key 的 Messages 后端。
+# [groups.v2]
+# base_url = "http://127.0.0.1:9001/v1"
+# token_env = "WB_MESSAGES_TOKEN"
+# auth = "x-api-key"
+# models = ["example-messages-model"]
+# routes = ["messages"]
+
+# 可选。显式登记仅用于本机备份的凭据变量。
+# [backup]
+# credentials = ["WB_ACCOUNT_REFRESH_TOKEN"]

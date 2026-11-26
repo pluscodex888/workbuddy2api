@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WorkBuddy2API 后台</title>
+  <link rel="stylesheet" href="/dashboard.css">
+  <script src="/dashboard.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="product">WORKBUDDY2API</p>
+      <h1>网关后台</h1>
+    </header>
+    <form id="auth">
+      <label for="token">网关管理密钥</label>
+      <div class="controls">
+        <input id="token" type="password" autocomplete="off" required>
+        <button type="submit">查看状态</button>
+      </div>
+    </form>
+    <p id="message" role="status"></p>
+    <section id="status" hidden aria-label="网关状态">
+      <div class="summary">
+        <div><h2>原生桥接</h2><p id="native"></p></div>
+        <div><h2>已转发请求</h2><p id="dispatched"></p></div>
+        <div><h2>本地拒绝</h2><p id="rejected"></p></div>
+        <div><h2>上游错误</h2><p id="errors"></p></div>
+      </div>
+      <h2>API 模型分组</h2>
+      <div class="table"><table>
+        <thead><tr><th scope="col">分组</th><th scope="col">模型</th><th scope="col">接口</th></tr></thead>
+        <tbody id="groups"></tbody>
+      </table></div>
+    </section>
+  </main>
+</body>
+</html>
